@@ -1,0 +1,13 @@
+<h1>Zona de Egresados</h1>
+
+<div id="btns-container">
+  <% if current_user %>
+    <p>Bienvenido <strong><%= current_user.email %></strong></p>
+    <%= link_to "Comenzar", rooms_path %>
+    <%= link_to "Salir", destroy_user_session_path, method: :delete, data: { turbo_method: :delete} %>
+  <% else %>
+    <%= link_to "Accesar", new_user_session_path %>
+    <%= link_to "Registrarse por primera vez", new_user_registration_path %>
+  <%end %>
+</div>
+
