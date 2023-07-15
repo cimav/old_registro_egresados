@@ -32,9 +32,6 @@
 
 dev.txt
 .idea
-tmp
-vendor
 Gemfile.lock
 log
-bin
 run-production.sh
